@@ -1,0 +1,34 @@
+# クラスの継承
+- 親クラスの処理を子クラスが継承し、記述量をまとめることができる。
+```
+class Apple < Fruit
+end
+```
+
+- 親クラス： Fruit、子クラス： Appleの場合
+```
+class Fruit
+  def initialize(name, color)
+    @name = name
+    @color = color
+  end
+  
+  def info
+    puts "#{@name}は#{@color}色です。"
+  end
+end
+
+class Apple < Fruit
+  def texture
+    puts "シャキシャキ"
+  end
+end
+
+apple = Apple.new("りんご", "赤")
+apple.info
+apple.texture
+
+出力結果：
+りんごは赤色です。
+シャキシャキ
+```
